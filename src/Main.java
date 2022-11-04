@@ -429,7 +429,57 @@ public class Main {
 //        Expected Output
 //
 //        Octal number: 7
-
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a binary number: ");
+//        String binaryNum = in.nextLine();
+//        int num = Integer.parseInt(binaryNum,2);
+//        String octalNumber = Integer.toOctalString(num);
+//        System.out.println("Octal number: " + octalNumber);
+        // --------------------------------------------
+//        25. Write a Java program to convert a octal number to a decimal number.
+//        Input Data:
+//        Input any octal number: 10
+//        Expected Output
+//
+//        Equivalent decimal number: 8
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input any octal number: ");
+//        String octalNumber = in.nextLine();
+//        int decimalNumber = Integer.parseInt(octalNumber,8);
+//        System.out.println("Equivalent decimal number: "  + decimalNumber);
+        // --------------------------------------------
+//        26. Write a Java program to convert a octal number to a binary number.
+//        Input Data:
+//        Input any octal number: 7
+//        Expected Output
+//
+//        Equivalent binary number: 111
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input any octal number: ");
+//        String octalNumber = in.nextLine();
+//        int number = Integer.parseInt(octalNumber,8);
+//        String binaryNumber = Integer.toBinaryString(number);
+//        System.out.println("Equivalent binary number: " + binaryNumber);
+        // --------------------------------------------
+//        27. Write a Java program to convert a octal number to a hexadecimal number.
+//        Input Data:
+//        Input a octal number : 100
+//        Expected Output
+//
+//        Equivalent hexadecimal number: 40
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a octal number: ");
+//        String octalNumber = in.nextLine();
+//        int decimalNumber = Integer.parseInt(octalNumber,8);
+//        String hexNumber = Integer.toHexString(decimalNumber);
+//        System.out.println("Equivalent hexadecimal number: " + hexNumber);
+        // --------------------------------------------
+//        28. Write a Java program to convert a hexadecimal to a decimal number.
+//        Input Data:
+//        Input a hexadecimal number: 25
+//        Expected Output
+//
+//        Equivalent decimal number is: 37
 
 
 

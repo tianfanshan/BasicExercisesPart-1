@@ -325,6 +325,7 @@ public class Main {
 //        Expected Output
 //
 //        Binary number is: 101
+
 //        int dec_num, quot, i=1, j;
 //        int bin_num[] = new int[100];
 //        Scanner scan = new Scanner(System.in);
@@ -358,6 +359,7 @@ public class Main {
 //        Expected Output
 //
 //        Hexadecimal number is : F
+
 //        int dec_num,rem;
 //        String hexdec_num = "";
 //        char[] hex = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
@@ -382,6 +384,26 @@ public class Main {
 //        Expected Output
 //
 //        Octal number is: 17
+
+//        int num,rem;
+//        char[] octal = {'0','1','2','3','4','5','6','7','8'};
+//        String octal_num = "";
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a decimal number: ");
+//        num = in.nextInt();
+//        while (num > 0){
+//            rem = num % 8;
+//            octal_num = octal[rem] + octal_num;
+//            num = num /8;
+//        }
+//        System.out.println("Octal number is: " + octal_num);
+        // --------------------------------------------
+//        22. Write a Java program to convert a binary number to decimal number.
+//        Input Data:
+//        Input a binary number: 100
+//        Expected Output
+//
+//        Decimal Number: 4
 
 
 

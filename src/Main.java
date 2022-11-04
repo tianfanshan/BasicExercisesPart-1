@@ -416,6 +416,19 @@ public class Main {
 //        Expected Output
 //
 //        HexaDecimal value: D
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter a binary number: ");
+//        String binaryNumber = in.nextLine();
+//        int decimalNumber = Integer.parseInt(binaryNumber,2);
+//        String hexadecimalNumber = Integer.toHexString(decimalNumber);
+//        System.out.println("Hexadecimal value: " + (hexadecimalNumber).toUpperCase());
+        // --------------------------------------------
+//        24. Write a Java program to convert a binary number to a Octal number.
+//        Input Data:
+//        Input a Binary Number: 111
+//        Expected Output
+//
+//        Octal number: 7
 
 
 

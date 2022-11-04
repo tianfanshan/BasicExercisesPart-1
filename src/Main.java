@@ -404,6 +404,18 @@ public class Main {
 //        Expected Output
 //
 //        Decimal Number: 4
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter a binary number: ");
+//        String binaryNumber = in.nextLine();
+//        int num = Integer.parseInt(binaryNumber,2);
+//        System.out.println("Decimal Number: " + num);
+        // --------------------------------------------
+//        23. Write a Java program to convert a binary number to hexadecimal number.
+//        Input Data:
+//        Input a Binary Number: 1101
+//        Expected Output
+//
+//        HexaDecimal value: D
 
 
 

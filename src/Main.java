@@ -1,3 +1,4 @@
+import java.nio.charset.Charset;
 import java.util.Scanner;
 
 public class Main {
@@ -480,6 +481,291 @@ public class Main {
 //        Expected Output
 //
 //        Equivalent decimal number is: 37
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a hexadecimal number: ");
+//        String hexNumber = in.nextLine();
+//        int number = Integer.parseInt(hexNumber,16);
+//        System.out.println("Equivalenct decimal number is : " + number);
+        // --------------------------------------------
+//        29. Write a Java program to convert a hexadecimal to a binary number.
+//        Input Data:
+//        Enter Hexadecimal Number : 37
+//        Expected Output
+//
+//        Equivalent Binary Number is: 110111
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter Hexadecimal number: ");
+//        String hexNumber = in.nextLine();
+//        int number = Integer.parseInt(hexNumber,16);
+//        String binaryNumber = Integer.toBinaryString(number);
+//        System.out.println("Equivalent Binary Number is: " + binaryNumber);
+        // --------------------------------------------
+//        30. Write a Java program to convert a hexadecimal to a octal number.
+//        Input Data:
+//        Input a hexadecimal number: 40
+//        Expected Output
+//
+//        Equivalent of octal number is: 100
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a hexadecimal number: ");
+//        String hexadecimalNumber = in.nextLine();
+//        int number = Integer.parseInt(hexadecimalNumber,16);
+//        String octalNumber = Integer.toOctalString(number);
+//        System.out.println("Eqquivalent of octal number is: " + octalNumber);
+        // --------------------------------------------
+//        31. Write a Java program to check whether Java is installed on your computer.
+//        Expected Output
+//
+//        Java Version: 1.8.0_71
+//        Java Runtime Version: 1.8.0_71-b15
+//        Java Home: /opt/jdk/jdk1.8.0_71/jre
+//        Java Vendor: Oracle Corporation
+//        Java Vendor URL: http://Java.oracle.com/
+//        Java Class Path: .
+//        System.out.println("Java Version: " + System.getProperty("java.version"));
+//        System.out.println("Java Runtime Version: " + System.getProperty("java.runtime.version"));
+//        System.out.println("Java Home: " + System.getProperty("java.home"));
+//        System.out.println("Java Vendor: " + System.getProperty("java.vendor"));
+//        System.out.println("Java Vendor URL: " + System.getProperty("java.vendor.url"));
+//        System.out.println("Java Class Path: " + System.getProperty("java.class.path"));
+        // --------------------------------------------
+//        32. Write a Java program to compare two numbers.
+//        Input Data:
+//        Input first integer: 25
+//        Input second integer: 39
+//        Expected Output
+//
+//        25 != 39
+//        25 < 39
+//        25 <= 39
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input first integer: ");
+//        int num1 = in.nextInt();
+//        System.out.println("Input second integer: ");
+//        int num2 = in.nextInt();
+//        if(num1 < num2){
+//            System.out.println(num1 + " != " + num2);
+//            System.out.println(num1 + " < " + num2);
+//            System.out.println(num1 + " <= " + num2);
+//        } else if (num1 == num2) {
+//            System.out.println(num1 + " = " + num2);
+//        }else{
+//            System.out.println(num1 + " > " + num2);
+//        }
+        // --------------------------------------------
+//        33. Write a Java program and compute the sum of the digits of an integer.
+//        Input Data:
+//        Input an integer: 25
+//        Expected Output
+//
+//        The sum of the digits is: 7
+//        long sum = 0;
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input an integer: ");
+//        long num = in.nextInt();
+//        while (num != 0){
+//            sum = num%10 + sum;
+//            num /= 10;
+//        }
+//        System.out.println("The sum of the digits is: " + sum);
+        // --------------------------------------------
+//        34. Write a Java program to compute the area of a hexagon.
+//        Area of a hexagon = (6 * s^2)/(4*tan(π/6))
+//        where s is the length of a side
+//        Input Data:
+//        Input the length of a side of the hexagon: 6
+//        Expected Output
+//
+//        The area of the hexagon is: 93.53074360871938
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the length of a side of the hexagon: ");
+//        double s = in.nextDouble();
+//        double areaOfHexagon = (6*(s*s))/(4*Math.tan(Math.PI/6));
+//        System.out.println("The area of the hexagon is: " + areaOfHexagon);
+        // --------------------------------------------
+//        35. Write a Java program to compute the area of a polygon.
+//        Area of a polygon = (n*s^2)/(4*tan(π/n))
+//        where n is n-sided polygon and s is the length of a side
+//        Input Data:
+//        Input the number of sides on the polygon: 7
+//        Input the length of one of the sides: 6
+//        Expected Output
+//
+//        The area is: 130.82084798405722
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the number of sides on the polygon: ");
+//        int ns = in.nextInt();
+//        System.out.println("Input the length of one of the sides: ");
+//        double side = in.nextDouble();
+//        double areaOfPolygon = (ns * (side * side)) / (4.0 * Math.tan((Math.PI / ns)));
+//        System.out.println("The area is: " + areaOfPolygon);
+        // --------------------------------------------
+//        36. Write a Java program to compute the distance between two points on the surface of earth.
+//        Distance between the two points [ (x1,y1) & (x2,y2)]
+//        d = radius * arccos(sin(x1) * sin(x2) + cos(x1) * cos(x2) * cos(y1 - y2))
+//        Radius of the earth r = 6371.01 Kilometers
+//        Input Data:
+//        Input the latitude of coordinate 1: 25
+//        Input the longitude of coordinate 1: 35
+//        Input the latitude of coordinate 2: 35.5
+//        Input the longitude of coordinate 2: 25.5
+//        Expected Output
+//
+//        The distance between those points is: 1480.0848451069087 km
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Input latitude of cordinate1 : ");
+//        double x1 = sc.nextDouble();
+//        System.out.print("Input longitude of cordinate1 : ");
+//        double y1 = sc.nextDouble();
+//        System.out.print("Input latitude of cordinate2 : ");
+//        double x2 = sc.nextDouble();
+//        System.out.print("Input latitude of cordinate2 : ");
+//        double y2 = sc.nextDouble();
+//
+//        double lat1 = Math.toRadians(x1);
+//        double long1 = Math.toRadians(y1);
+//        double lat2 = Math.toRadians(x2);
+//        double long2 = Math.toRadians(y2);
+//        double d = 6371.01 * Math.acos((Math.sin(lat1)*Math.sin(lat2))+(Math.cos(lat1)*Math.cos(lat2)*Math.cos(long1 - long2)));
+//        System.out.println("The distance between those point is : "+d);
+        // --------------------------------------------
+//        37. Write a Java program to reverse a string.
+//        Input Data:
+//        Input a string: The quick brown fox
+//        Expected Output
+//
+//        Reverse string: xof nworb kciuq ehT
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a string: ");
+//        String str = in.nextLine();
+//        StringBuffer sb = new StringBuffer(str);
+//        System.out.println(sb.reverse());
+        // --------------------------------------------
+//        38. Write a Java program to count the letters, spaces, numbers and other characters of an input string.
+//        Expected Output
+//
+//        The string is :  Aa kiu, I swd skieo 236587. GH kiu: sieo?? 25.33
+//        letter: 23
+//        space: 9
+//        number: 10
+//        other: 6
+//        int letter = 0;
+//        int space = 0;
+//        int num = 0;
+//        int other = 0;
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input your string: ");
+//        String str = in.nextLine();
+//        char[] ch = str.toCharArray();
+//        for (int i = 0; i< str.length(); i++){
+//            if (Character.isLetter(ch[i])){
+//                letter++;
+//            } else if (Character.isSpaceChar(ch[i])) {
+//                space++;
+//            } else if (Character.isDigit(ch[i])) {
+//                num++;
+//            }else{
+//                other++;
+//            }
+//        }
+//        System.out.println("letter: " + letter);
+//        System.out.println("space: " + space);
+//        System.out.println("number: " + num);
+//        System.out.println("other: " + other);
+        // --------------------------------------------
+//        39. Write a Java program to create and display unique three-digit number using 1, 2, 3, 4. Also count how many three-digit numbers are there.
+//        Expected Output
+//
+//        123
+//        124
+//        ...
+//
+//        431
+//        432
+//        Total number of the three-digit-number is 24
+//        int threeDigitNumberCount = 0;
+//        for(int i = 1; i <= 4; i++){
+//            for(int j = 1; j <= 4; j++){
+//                for(int k = 1; k <= 4; k++){
+//                    if(k != i && k != j && i != j){
+//                        threeDigitNumberCount++;
+//                        System.out.println(i + "" + j + "" + k);
+//                    }
+//                }
+//            }
+//        }
+//        System.out.println("Total number of three-digit-number is " + threeDigitNumberCount);
+        // --------------------------------------------
+//        40. Write a Java program to list the available character sets in charset objects.
+//        Expected Output
+//
+//        List of available character sets:
+//        Big5
+//        Big5-HKSCS
+//        CESU-8
+//        EUC-JP
+//        EUC-KR
+//        GB18030
+//                GB2312
+//        GBK
+//
+//        ...
+//
+//        x-SJIS_0213
+//        x-UTF-16LE-BOM
+//        X-UTF-32BE-BOM
+//        X-UTF-32LE-BOM
+//        x-windows-50220
+//        x-windows-50221
+//        x-windows-874
+//        x-windows-949
+//        x-windows-950
+//        x-windows-iso2022jp
+//        System.out.println("List of available character sets: ");
+//        for (String str : Charset.availableCharsets().keySet()){
+//            System.out.println(str);
+//        }
+        // --------------------------------------------
+//        41. Write a Java program to print the ascii value of a given character.
+//        Expected Output
+//
+//        The ASCII value of Z is :90
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

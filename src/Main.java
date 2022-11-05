@@ -2,8 +2,10 @@
 import java.io.Console;
 import java.io.File;
 import java.nio.charset.Charset;
+import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -946,28 +948,100 @@ public class Main {
 //        Sample Output:
 //
 //        5
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Range minimum: ");
+//        int minimum = in.nextInt();
+//        System.out.println("Range maximum: ");
+//        int maximum = in.nextInt();
+//        System.out.println("Div: ");
+//        int div = in.nextInt();
+//        for (int i = minimum + 1; i < maximum; i++) {
+//            if (i % div == 0) {
+//                System.out.println(i + ",");
+//            }
+//        }
+        // --------------------------------------------
+//        57. Write a Java program to accepts an integer and count the factors of the number.
+//        Sample Output:
+//
+//        Input an integer: 25
+//        3
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input and integer: ");
+//        int num = in.nextInt();
+//        int count = 0;
+//        for (int i = 1;i <= num; i++){
+//            if (num % i == 0){
+//                count++;
+//            }
+//        }
+//        System.out.println(count);
+        // --------------------------------------------
+//        58. Write a Java program to capitalize the first letter of each word in a sentence.
+//        Sample Output:
+//
+//        Input a Sentence: the quick brown fox jumps over the lazy dog.
+//        The Quick Brown Fox Jumps Over The Lazy Dog.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a Sentence: ");
+//        String word = "";
+//        StringBuffer sb = new StringBuffer();
+//        String str = in.nextLine();
+//        String[] stringArray = str.split(" ");
+//        for (String s: stringArray){
+//            word = s.substring(0,1).toUpperCase() + s.substring(1,s.length()) + " ";
+//            sb.append(word);
+//        }
+//        System.out.println(sb);
+        // --------------------------------------------
+//        59. Write a Java program to convert a given string into lowercase.
+//        Sample Output:
+//
+//        Input a String: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+//        the quick brown fox jumps over the lazy dog.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a String: ");
+//        String lowerStr = in.nextLine().toLowerCase();
+//        System.out.println(lowerStr);
+        // --------------------------------------------
+//        60. Write a Java program to find the penultimate (next to last) word of a sentence.
+//        Sample Output:
+//
+//        Input a String: The quick brown fox jumps over the lazy dog.
+//        Penultimate word: lazy
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a String: ");
+//        String str = in.nextLine();
+//        String[] stringArray = str.split(" ");
+//        String penultimateWord = stringArray[stringArray.length -2];
+//        System.out.println(penultimateWord);
+        // --------------------------------------------
+//        61. Write a Java program to reverse a word. Go to the editor
+//        Sample Output:
+//
+//        Input a word: dsaf
+//        Reverse word: fasd
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a word: ");
+//        String str = in.nextLine();
+//        StringBuffer sb = new StringBuffer();
+//        sb.append(str).reverse().toString();
+//        System.out.println(sb);
+        // --------------------------------------------
+//        62. Write a Java program that accepts three integer values and return true if one of them is 20 or more and less than the substractions of others.
+//        Sample Output:
+//
+//        Input the first number : 15
+//        Input the second number: 20
+//        Input the third number : 25
+//        false
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input the first number: ");
+        int num1 = in.nextInt();
+        System.out.println("Input the second number: ");
+        int num2 = in.nextInt();
+        System.out.println("Input the third number: ");
+        int num3 = in.nextInt();
 
 
 
@@ -1000,14 +1074,15 @@ public class Main {
 
     }
 
-    public static boolean test(int num1,int num2,int num3,boolean bl){
-        if (bl){
+    public static boolean test(int num1, int num2, int num3, boolean bl) {
+        if (bl) {
             return (num3 > num2);
         }
         return (num3 > num2 && num2 > num1);
     }
-    public static boolean test54(int num1,int num2,int num3){
-        return(num1 % 10 == num2 % 10 || num2 % 10 == num3 % 10 || num3 % 10 == num1 % 10);
+
+    public static boolean test54(int num1, int num2, int num3) {
+        return (num1 % 10 == num2 % 10 || num2 % 10 == num3 % 10 || num3 % 10 == num1 % 10);
     }
 
 }

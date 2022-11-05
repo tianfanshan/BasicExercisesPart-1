@@ -819,6 +819,131 @@ public class Main {
 //
 //        Input a number: 20
 //        1
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a number: ");
+//        int num = in.nextInt();
+//        if (num % 2 == 0){
+//            System.out.println(1);
+//        }else{
+//            System.out.println(0);
+//        }
+        // --------------------------------------------
+//        50. Write a Java program to print numbers between 1 to 100 which are divisible by 3, 5 and by both.
+//        Sample Output:
+//
+//        Divided by 3:
+//        3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57
+//                , 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99,
+//
+//        Divided by 5:
+//        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
+//                95,
+//
+//        Divided by 3 & 5:
+//        15, 30, 45, 60, 75, 90,
+//        System.out.println("Divided by 3: ");
+//        for (int i = 0;i < 100;i++){
+//            if (i % 3 == 0){
+//                System.out.print(i + ",");
+//            }
+//        }
+//        System.out.println("\nDivided by 5: ");
+//        for (int i = 0;i < 100;i++){
+//            if (i % 5 == 0){
+//                System.out.print(i + ",");
+//            }
+//        }
+//        System.out.println("\nDivided by 3 & 5: ");
+//        for (int i = 0;i < 100;i++){
+//            if (i % 3 == 0 && i % 5 ==0){
+//                System.out.print(i + ",");
+//            }
+//        }
+        // --------------------------------------------
+//        51. Write a Java program to convert a string to an integer in Java.
+//        Sample Output:
+//
+//        Input a number(string): 25
+//        The integer value is: 25
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a number(String): ");
+//        String num = in.nextLine();
+//        int intNumber = Integer.parseInt(num);
+//        System.out.println("The integer value is: " + intNumber);
+        // --------------------------------------------
+//        52. Write a Java program to calculate the sum of two integers and return true if the sum is equal to a third integer.
+//        Sample Output:
+//
+//        Input the first number : 5
+//        Input the second number: 10
+//        Input the third number : 15
+//        The result is: true
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the first number: ");
+//        int num1 = in.nextInt();
+//        System.out.println("Input the second number: ");
+//        int num2 = in.nextInt();
+//        System.out.println("Input the third number: ");
+//        int num3 = in.nextInt();
+//        if (num1 + num2 == num3){
+//            System.out.println("The result is: ture");
+//        }else{
+//            System.out.println("The result is: false");
+//        }
+        // --------------------------------------------
+//        53. Write a Java program that accepts three integers from the user and return true if the second number is greater than first number and third number is greater than second number. If "abc" is true second number does not need to be greater than first number.
+//        Sample Output:
+//
+//        Input the first number : 5
+//        Input the second number: 10
+//        Input the third number : 15
+//        The result is: true
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the first number: ");
+//        int num1 = in.nextInt();
+//        System.out.println("Input the second number: ");
+//        int num2 = in.nextInt();
+//        System.out.println("Input the third number: ");
+//        int num3 = in.nextInt();
+//        System.out.println("The result is: " + test(num1,num2,num3,true));
+        // --------------------------------------------
+//        54. Write a Java program that accepts three integers from the user and return true if two or more of them (integers ) have the same rightmost digit. The integers are non-negative.
+//        Sample Output:
+//
+//        Input the first number : 5
+//        Input the second number: 10
+//        Input the third number : 15
+//        The result is: true
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the first number: ");
+//        int num1 = in.nextInt();
+//        System.out.println("Input the second number: ");
+//        int num2 = in.nextInt();
+//        System.out.println("Input the third number: ");
+//        int num3 = in.nextInt();
+//        System.out.println("The result is: " + test54(num1,num2,num3));
+        // --------------------------------------------
+//        55. Write a Java program to convert seconds to hour, minute and seconds.
+//        Sample Output:
+//
+//        Input seconds: 86399
+//        23:59:59
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input second: ");
+//        int second = in.nextInt();
+//        int s = second % 60;
+//        int minutes = second / 60;
+//        int m = minutes % 60;
+//        int hour = minutes / 60;
+//        int h = hour % 24;
+//        int day = hour / 24;
+//        System.out.print(day + " day " + h + ":" + m + ":" + s);
+        // --------------------------------------------
+//        56. Write a Java program to find the number of values in a given range divisible by a given value.
+//        For example x = 5, y=20 and p =3, find the number of integers within the range x..y and that are divisible by p i.e. { i :x ≤ i ≤ y, i mod p = 0 }
+//        Sample Output:
+//
+//        5
 
 
 
@@ -865,6 +990,22 @@ public class Main {
 
 
 
+
+
+
+
+
+
+    }
+
+    public static boolean test(int num1,int num2,int num3,boolean bl){
+        if (bl){
+            return (num3 > num2);
+        }
+        return (num3 > num2 && num2 > num1);
+    }
+    public static boolean test54(int num1,int num2,int num3){
+        return(num1 % 10 == num2 % 10 || num2 % 10 == num3 % 10 || num3 % 10 == num1 % 10);
     }
 
 }

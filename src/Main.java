@@ -1,4 +1,10 @@
+
+import java.io.Console;
+import java.io.File;
 import java.nio.charset.Charset;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -730,6 +736,89 @@ public class Main {
 //        Expected Output
 //
 //        The ASCII value of Z is :90
+//        int chr = 'Z';
+//        System.out.println("The ASCII value of Z is: " + chr);
+        // --------------------------------------------
+//        43. Write a Java program to print the following string in a specific format (see the output).
+//        Sample Output
+//
+//        Twinkle, twinkle, little star,
+//                How I wonder what you are!
+//                        Up above the world so high,
+//                        Like a diamond in the sky.
+//        Twinkle, twinkle, little star,
+//                How I wonder what you are
+//        System.out.println("Twinkle, twinkle, little star," +
+//                "\n\t\tHow I wonder what you are!" +
+//                "\n\t\t\tUp above the world so high," +
+//                "\n\t\t\tLike a diamond in the sky." +
+//                "\nTwinkle, twinkle, little star," +
+//                "\n\t\tHow I wonder what you are");
+        // --------------------------------------------
+//        44. Write a Java program that accepts an integer (n) and computes the value of n+nn+nnn.
+//        Sample Output:
+//
+//        Input number: 5
+//        5 + 55  + 555
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the integer number: ");
+//        int n = in.nextInt();
+//        System.out.printf("%d + %d%d + %d%d%d\n",n,n,n,n,n,n);
+        // --------------------------------------------
+//        45. Write a Java program to find the size of a specified file.
+//        Sample Output:
+//
+//        /home/students/abc.txt  : 0 bytes
+//            /home/students/test.txt : 0 bytes
+//        String pathFile = "C:\\Users\\tf\\JavaProjects\\test.txt";
+//        File file = new File(pathFile);
+//        if (file.exists()){
+//            System.out.println(file.getAbsolutePath() + ": " + file.length());
+//        }
+        // --------------------------------------------
+//        46. Write a Java program to display the system time.
+//        Sample Output:
+//
+//        Current Date time: Fri Jun 16 14:17:40 IST 2017
+//        Date d = new Date();
+//        System.out.println("Current datetime is: " + d);
+        // --------------------------------------------
+//        47. Write a Java program to display the current date time in specific format.
+//        Sample Output:
+//
+//        Now: 2017/06/16 08:52:03.066
+//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/mm/dd hh:mm:ss");
+//        LocalDateTime now = LocalDateTime.now();
+//        System.out.println(dtf.format(now));
+        // --------------------------------------------
+//        48. Write a Java program to print the odd numbers from 1 to 99. Prints one number per line. Go
+//        Sample Output:
+//
+//        1
+//        3
+//        5
+//        7
+//        9
+//        11
+//        ....
+//
+//        91
+//        93
+//        95
+//        97
+//        99
+//        for (int i = 1; i < 100; i++){
+//            if (i % 2 != 0) {
+//                System.out.println(i);
+//            }
+//        }
+        // --------------------------------------------
+//        49. Write a Java program to accept a number and check the number is even
+//        or not. Prints 1 if the number is even or 0 if the number is odd.
+//        Sample Output:
+//
+//        Input a number: 20
+//        1
 
 
 

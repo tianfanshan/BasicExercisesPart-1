@@ -937,7 +937,9 @@ public class Main {
 //        int hour = minutes / 60;
 //        int h = hour % 24;
 //        int day = hour / 24;
-//        System.out.print(day + " day " + h + ":" + m + ":" + s);
+//        int d = day % 365;
+//        int year = day / 365;
+//        System.out.print(year + " year " + d + " day " + h + ":" + m + ":" + s);
         // --------------------------------------------
 //        56. Write a Java program to find the number of values in a given range divisible by a given value.
 //        For example x = 5, y=20 and p =3, find the number of integers within the range x..y and that are divisible by p i.e. { i :x ≤ i ≤ y, i mod p = 0 }

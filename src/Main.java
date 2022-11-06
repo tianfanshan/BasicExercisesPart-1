@@ -1355,15 +1355,80 @@ public class Main {
 //
 //        Original Array: [20, 30, 40]
 //        Larger value between first and last element: 40
-
-
-
-
-
-
-
-
-
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the number of elements you want to store for array: ");
+//        int n = in.nextInt();
+//        System.out.println("Enter the elements of the array: ");
+//        int[] intArray = new int[n];
+//        for (int i = 0; i < n; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println("Larger value between first and last elements: " + test80(intArray));
+        // --------------------------------------------
+//        81. Write a Java program to swap the first
+//        and last elements of an array (length must be at least 1) and create a new array.
+//        Sample Output:
+//
+//        Original Array: [20, 30, 40]
+//        New array after swapping the first and last elements: [40, 30, 20]
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the number of elements you want to store for array: ");
+//        int n = in.nextInt();
+//        System.out.println("Enter the elements of the array: ");
+//        int[] intArray = new int[n];
+//        for (int i = 0; i < n; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println("New array after swapping the first and last elements: " + Arrays.toString(test81(intArray)));
+        // --------------------------------------------
+//        82. Write a Java program to find the largest element between first, last,
+//        and middle values from an array of integers (even length).
+//        Sample Output:
+//
+//        Original Array: [20, 30, 40, 50, 67]
+//        Largest element between first, last, and middle values: 67
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the number of elements you want to store for array: ");
+//        int n = in.nextInt();
+//        System.out.println("Enter the elements of the array: ");
+//        int[] intArray = new int[n];
+//        for (int i = 0; i < n; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println("Largest element between first, last and middle values: " + test82(intArray));
+        // --------------------------------------------
+//        83. Write a Java program to multiply corresponding elements of two arrays of integers.
+//        Sample Output:
+//
+//        Array1: [1, 3, -5, 4]
+//
+//        Array2: [1, 4, -5, -2]
+//
+//        Result: 1 12 25 -8
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the number of elements you want to store for array: ");
+//        int n = in.nextInt();
+//        System.out.println("Enter the elements of the array: ");
+//        int[] intArray = new int[n];
+//        for (int i = 0; i < n; i++) {
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println("Enter the number of elements you want to store for array: ");
+//        int n2 = in.nextInt();
+//        System.out.println("Enter the elements of the array: ");
+//        int[] intArray2 = new int[n2];
+//        for (int i = 0; i < n; i++) {
+//            intArray2[i] = in.nextInt();
+//        }
+//        System.out.println("Result: " + Arrays.toString(test83(intArray,intArray2)));
+        // --------------------------------------------
+//        84. Write a Java program to take the last three characters
+//        from a given string and add the three characters at both the front and back of the string.
+//        String length must be greater than three and more.
+//        Test data: "Python" will be "honPythonhon"
+//        Sample Output:
+//
+//        honPythonhon
 
 
 
@@ -1409,99 +1474,136 @@ public class Main {
     public static boolean test54(int num1, int num2, int num3) {
         return (num1 % 10 == num2 % 10 || num2 % 10 == num3 % 10 || num3 % 10 == num1 % 10);
     }
-    public static int test63(int num1,int num2){
-        if (num1 == num2){
+
+    public static int test63(int num1, int num2) {
+        if (num1 == num2) {
             return 0;
-        }else if (num1 % 6 == num2 % 6){
-            if (num1 < num2){
+        } else if (num1 % 6 == num2 % 6) {
+            if (num1 < num2) {
                 return num1;
-            }else{
+            } else {
                 return num2;
             }
-        }else{
-            if (num1 < num2){
+        } else {
+            if (num1 < num2) {
                 return num2;
-            }else{
+            } else {
                 return num1;
             }
         }
     }
 
-    public static boolean test64(int num1,int num2){
-        if (num1 < 75 && num1 > 25 && num2 < 75 && num2 > 25){
-            if (num1 % 10 == num2 % 10 || num1 % 10 == num2 / 10 || num1 / 10 == num2 % 10 || num1 / 10 == num2 / 10){
+    public static boolean test64(int num1, int num2) {
+        if (num1 < 75 && num1 > 25 && num2 < 75 && num2 > 25) {
+            if (num1 % 10 == num2 % 10 || num1 % 10 == num2 / 10 || num1 / 10 == num2 % 10 || num1 / 10 == num2 / 10) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
         }
         return false;
     }
 
-    public static int test65(int num1,int num2){
-        if (num1 > num2){
+    public static int test65(int num1, int num2) {
+        if (num1 > num2) {
             int times = num1 / num2;
             return num1 - (num2 * times);
-        }else{
+        } else {
             int times = num2 / num1;
             return num2 - (num1 * times);
         }
     }
 
-    public static boolean test66(int n){
-        for (int i = 2; i <= n-1; i++){
-            if (n % i == 0){
+    public static boolean test66(int n) {
+        for (int i = 2; i <= n - 1; i++) {
+            if (n % i == 0) {
                 return false;
             }
         }
         return true;
     }
 
-    public static boolean test74(int[] intArray){
-        if (intArray.length < 2){
+    public static boolean test74(int[] intArray) {
+        if (intArray.length < 2) {
             return false;
-        } else if (intArray[0] == 10 && intArray[intArray.length-1] == 10) {
+        } else if (intArray[0] == 10 && intArray[intArray.length - 1] == 10) {
             return true;
         }
         return false;
     }
 
-    public static boolean test76(int[] intArray1,int[] intArray2){
-        if (intArray1.length < 2 || intArray2.length < 2){
+    public static boolean test76(int[] intArray1, int[] intArray2) {
+        if (intArray1.length < 2 || intArray2.length < 2) {
             return false;
-        } else if (intArray1[0] == intArray2[0] || intArray1[intArray1.length -1] == intArray2[intArray2.length -1]) {
+        } else if (intArray1[0] == intArray2[0] || intArray1[intArray1.length - 1] == intArray2[intArray2.length - 1]) {
             return true;
         }
         return false;
     }
 
-    public static int[] test77(int[] intArray1,int[] intArray2){
+    public static int[] test77(int[] intArray1, int[] intArray2) {
         int[] newArray = new int[2];
-        if (intArray1.length < 2 || intArray2.length < 2){
+        if (intArray1.length < 2 || intArray2.length < 2) {
             return null;
         }
         newArray[0] = intArray1[0];
-        newArray[1] = intArray2[intArray2.length -1];
+        newArray[1] = intArray2[intArray2.length - 1];
         return newArray;
     }
 
-    public static boolean test78(int[] intArray){
-        for (int i : intArray){
-            if (i == 5 || i == 7){
+    public static boolean test78(int[] intArray) {
+        for (int i : intArray) {
+            if (i == 5 || i == 7) {
                 return true;
             }
         }
         return false;
     }
 
-    public static int[] test79(int[] intArray){
+    public static int[] test79(int[] intArray) {
         int length = intArray.length;
         int[] outArray = new int[length];
-        for (int i = 0; i < length -1;i++){
+        for (int i = 0; i < length - 1; i++) {
             outArray[i] = intArray[i + 1];
         }
-        outArray[length -1] = intArray[0];
+        outArray[length - 1] = intArray[0];
         return outArray;
+    }
+
+    public static int test80(int[] intArray) {
+        int num = 0;
+        for (int i : intArray) {
+            if (i > num) {
+                num = i;
+            }
+        }
+        return num;
+    }
+
+    public static int[] test81(int[] intArray) {
+        int n = intArray[0];
+        intArray[0] = intArray[intArray.length - 1];
+        intArray[intArray.length - 1] = n;
+        return intArray;
+    }
+
+    public static int test82(int[] intArray) {
+        if (intArray[0] > intArray[intArray.length - 1] && intArray[0] > intArray[intArray.length / 2]) {
+            return intArray[0];
+        } else if (intArray[intArray.length - 1] > intArray[0] && intArray[intArray.length - 1] > intArray[intArray.length / 2]) {
+            return intArray[intArray.length - 1];
+        } else {
+            return intArray[intArray.length / 2];
+        }
+    }
+
+    public static int[] test83(int[] intArray1, int[] intArray2) {
+
+        int[] newArray = new int[intArray1.length > intArray2.length || intArray1.length == intArray2.length ? intArray1.length : intArray2.length];
+        for (int i = 0; i < newArray.length; i++) {
+            newArray[i] = intArray1[i] * intArray2[i];
+        }
+        return newArray;
     }
 
 }

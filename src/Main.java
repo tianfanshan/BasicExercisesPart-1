@@ -1214,6 +1214,31 @@ public class Main {
 //        Sample Output:
 //
 //        P#
+//        String newString = "";
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input your string: ");
+//        String str1 = in.nextLine();
+//        System.out.println("Input your second string: ");
+//        String str2 = in.nextLine();
+//        if (str1.length() == 0 || str2.length() == 0){
+//            if (str1.length() > str2.length()){
+//                str1 = str1.substring(0,1);
+//                str2 = "#";
+//            }else {
+//                str2 = str2.substring(0,1);
+//                str1 = "#";
+//            }
+//        }
+//        newString = str1 + str2;
+//        System.out.println(newString);
+        // --------------------------------------------
+//        74. Write a Java program to test if 10 appears as either
+//        the first or last element of an array of integers.
+//        The length of the array must be greater than or equal to 2.
+//        Sample Output:
+//        Test Data: array = 10, -20, 0, 30, 40, 60, 10
+//
+//        true
 
 
 

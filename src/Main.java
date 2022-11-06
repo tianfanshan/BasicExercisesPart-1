@@ -1239,6 +1239,71 @@ public class Main {
 //        Test Data: array = 10, -20, 0, 30, 40, 60, 10
 //
 //        true
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the number of elements you want to store: ");
+//        int n = in.nextInt();
+//        int[] intArray = new int[n];
+//        System.out.println("Enter the elements of the array: ");
+//        for (int i = 0; i < n; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println("Result: " + test74(intArray));
+        // --------------------------------------------
+//        75. Write a Java program to test if the first and the last element
+//        of an array of integers are same. The length of the array must be greater
+//        than or equal to 2.
+//        Test Data: array = 50, -20, 0, 30, 40, 60, 10
+//        Sample Output:
+//
+//        false
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the number of elements you want to store: ");
+//        int n = in.nextInt();
+//        int[] intArray = new int[n];
+//        System.out.println("Enter the elements of the array: ");
+//        for (int i = 0; i < n; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println("Result: " + test74(intArray));
+        // --------------------------------------------
+//        76. Write a Java program to test if the first or the last element
+//        of two array of integers are same.
+//        The length of the array must be greater than or equal to 2.
+//        Test Data: array1 = 50, -20, 0, 30, 40, 60, 12
+//        array2 = 45, 20, 10, 20, 30, 50, 11
+//        Sample Output:
+//
+//        false
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the number of elements you want to store for first array: ");
+//        int firstArrayLength = in.nextInt();
+//        System.out.println("Enter the elements of the first array: ");
+//        int[] firstArray = new int[firstArrayLength];
+//        for (int i = 0; i < firstArrayLength; i++){
+//            firstArray[i] = in.nextInt();
+//        }
+//        System.out.println("Enter the number of elements you want to store for second array: ");
+//        int secondArrayLength = in.nextInt();
+//        System.out.println("Enter the elements of the second array: ");
+//        int[] secondArray = new int[secondArrayLength];
+//        for (int i = 0; i < secondArrayLength; i++){
+//            secondArray[i] = in.nextInt();
+//        }
+//        System.out.println(test76(firstArray,secondArray));
+        // --------------------------------------------
+//        77. Write a Java program to create a new array of length 2 from two arrays of integers
+//        with three elements and the new array will contain the first and last elements from
+//        the two arrays.
+//        Test Data: array1 = 50, -20, 0
+//        array2 = 5, -50, 10
+//        Sample Output:
+//
+//        Array1: [50, -20, 0]
+//        Array2: [5, -50, 10]
+//        New Array: [50, 10]
+
+
+
 
 
 
@@ -1342,6 +1407,24 @@ public class Main {
             }
         }
         return true;
+    }
+
+    public static boolean test74(int[] intArray){
+        if (intArray.length < 2){
+            return false;
+        } else if (intArray[0] == 10 && intArray[intArray.length-1] == 10) {
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean test76(int[] intArray1,int[] intArray2){
+        if (intArray1.length < 2 || intArray2.length < 2){
+            return false;
+        } else if (intArray1[0] == intArray2[0] || intArray1[intArray1.length -1] == intArray2[intArray2.length -1]) {
+            return true;
+        }
+        return false;
     }
 
 }

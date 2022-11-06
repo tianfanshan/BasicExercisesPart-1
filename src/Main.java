@@ -1102,6 +1102,129 @@ public class Main {
 //        Sample Output:
 //
 //        Python Tutorial 3.0
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input a string: ");
+//        String str = in.nextLine();
+//        String[] strArray = str.split(" ");
+//        StringBuffer sb = new StringBuffer();
+//        for (String s: strArray){
+//            if (s != strArray[strArray.length -1]){
+//                sb.append(s + " Tutorial ");
+//            }else{
+//                sb.append(s);
+//            }
+//        }
+//        System.out.println(sb.toString());
+        // --------------------------------------------
+//        68. Write a Java program to create a new string of 4 copies
+//        of the last 3 characters of the original string. The length
+//        of the original string must be 3 and above.
+//        Sample Output:
+//
+//        3.03.03.03.0
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input your string: ");
+//        String str = in.nextLine();
+//        String lastThreeChar = str.substring(str.length() -3);
+//        StringBuffer sb = new StringBuffer();
+//        for (int i = 0; i < 4; i++){
+//            sb.append(lastThreeChar);
+//        }
+//        System.out.println(sb.toString());
+        // --------------------------------------------
+//        69. Write a Java program to extract the first half of a string of even length.
+//        Test Data: Python
+//        Sample Output:
+//        Pyt
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input your string: ");
+//        String str = in.nextLine();
+//        String firstHalfStr = str.substring(0,(str.length() / 2));
+//        System.out.println(firstHalfStr);
+        // --------------------------------------------
+//        70. Write a Java program to create a string in the form
+//        short_string + long_string + short_string from two strings.
+//        The strings must not have the same length.
+//        Test Data: Str1 = Python
+//        Str2 = Tutorial
+//        Sample Output:
+//
+//        PythonTutorialPython
+//        String finalString = "";
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input your first string: ");
+//        String str1 = in.nextLine();
+//        System.out.println("Input your second string: ");
+//        String str2 = in.nextLine();
+//        if (str1.length() == str2.length()){
+//            System.out.println("The strings must not have the same length");
+//        }else {
+//            if (str1.length() > str2.length()){
+//                finalString = str2 + str1 + str2;
+//            }else{
+//                finalString = str1 + str2 + str1;
+//            }
+//        }
+//        System.out.println(finalString);
+        // --------------------------------------------
+//        71. Write a Java program to create the concatenation of the
+//        two strings except removing the first character of each string.
+//        The length of the strings must be 1 and above.
+//        Test Data: Str1 = Python
+//        Str2 = Tutorial
+//        Sample Output:
+//
+//        ythonutorial
+//        String newString = "";
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input first string:");
+//        String str1 = in.nextLine();
+//        System.out.println("Input your second string: ");
+//        String str2 = in.nextLine();
+//        str1 = str1.substring(1);
+//        str2 = str2.substring(1);
+//        newString = str1 + str2;
+//        System.out.println(newString);
+        // --------------------------------------------
+//        72. Write a Java program to create a new string taking first three characters
+//        from a given string. If the length of the given string is less than 3 use "#"
+//        as substitute characters.
+//        Test Data: Str1 = " "
+//        Sample Output:
+//
+//        ###
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input your string: ");
+//        String str = in.nextLine();
+//        StringBuffer sb = new StringBuffer();
+//        if (str.length() < 4){
+//            for (int i = 0 ; i < str.length(); i++){
+//                sb.append("#");
+//            }
+//        }else{
+//            sb.append(str);
+//        }
+//        System.out.println(sb.toString());
+        // --------------------------------------------
+//        73. Write a Java program to create a new string taking
+//        first and last characters from two given strings.
+//        If the length of either string is 0 use "#" for missing character.
+//        Test Data: str1 = "Python"
+//        str2 = " "
+//        Sample Output:
+//
+//        P#
+
+
+
+
+
+
+
+
+
+
+
 
 
 

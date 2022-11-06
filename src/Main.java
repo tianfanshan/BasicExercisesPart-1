@@ -1035,13 +1035,77 @@ public class Main {
 //        Input the second number: 20
 //        Input the third number : 25
 //        false
-        Scanner in = new Scanner(System.in);
-        System.out.println("Input the first number: ");
-        int num1 = in.nextInt();
-        System.out.println("Input the second number: ");
-        int num2 = in.nextInt();
-        System.out.println("Input the third number: ");
-        int num3 = in.nextInt();
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the first number: ");
+//        int num1 = in.nextInt();
+//        System.out.println("Input the second number: ");
+//        int num2 = in.nextInt();
+//        System.out.println("Input the third number: ");
+//        int num3 = in.nextInt();
+//        System.out.println((Math.abs(num1 - num2) >= 20 || Math.abs(num2 - num3) >= 20 || Math.abs(num3 - num1) >= 20));
+        // --------------------------------------------
+//        63. Write a Java program that accepts two integer values from the user and return the larger values. However if the two values are the same, return 0 and return the smaller value if the two values have the same remainder when divided by 6. Go to the editor
+//        Sample Output:
+//
+//        Input the first number : 12
+//        Input the second number: 13
+//        Result: 13
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the first number: ");
+//        int num1 = in.nextInt();
+//        System.out.println("Input the second number: ");
+//        int num2 = in.nextInt();
+//        System.out.println("Result: " + test63(num1,num2));
+        // --------------------------------------------
+//        64. Write a Java program that accepts two integer values between 25 to 75 and return true if there is a common digit in both numbers.
+//        Sample Output:
+//
+//        Input the first number : 35
+//        Input the second number: 45
+//        Result: true
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the first number: ");
+//        int num1 = in.nextInt();
+//        System.out.println("Input the second number: ");
+//        int num2 = in.nextInt();
+//        System.out.println("Result: " + test64(num1,num2));
+        // --------------------------------------------
+//        65. Write a Java program to calculate the modules of two numbers without using any inbuilt modulus operator.
+//        Sample Output:
+//
+//        Input the first number : 19
+//        Input the second number: 7
+//        5
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the first number: ");
+//        int num1 = in.nextInt();
+//        System.out.println("Input the second number: ");
+//        int num2 = in.nextInt();
+//        System.out.println(test65(num1,num2));
+        // --------------------------------------------
+//        66. Write a Java program to compute the sum of the first 100 prime numbers.
+//        Sample Output:
+//
+//        Sum of the first 100 prime numbers: 24133
+//        int sum = 2;
+//        int count = 1;
+//        for (int i = 3; count < 100; i += 2){
+//            if (test66(i)){
+//                sum += i;
+//                count++;
+//            }
+//        }
+//        System.out.println("Sum of the first 100 prime numbers: " + sum);
+        // --------------------------------------------
+//        67. Write a Java program to insert a word in the middle of the another string.
+//        Insert "Tutorial" in the middle of "Python 3.0", so result will be Python Tutorial 3.0
+//        Sample Output:
+//
+//        Python Tutorial 3.0
+
+
+
+
 
 
 
@@ -1083,6 +1147,53 @@ public class Main {
 
     public static boolean test54(int num1, int num2, int num3) {
         return (num1 % 10 == num2 % 10 || num2 % 10 == num3 % 10 || num3 % 10 == num1 % 10);
+    }
+    public static int test63(int num1,int num2){
+        if (num1 == num2){
+            return 0;
+        }else if (num1 % 6 == num2 % 6){
+            if (num1 < num2){
+                return num1;
+            }else{
+                return num2;
+            }
+        }else{
+            if (num1 < num2){
+                return num2;
+            }else{
+                return num1;
+            }
+        }
+    }
+
+    public static boolean test64(int num1,int num2){
+        if (num1 < 75 && num1 > 25 && num2 < 75 && num2 > 25){
+            if (num1 % 10 == num2 % 10 || num1 % 10 == num2 / 10 || num1 / 10 == num2 % 10 || num1 / 10 == num2 / 10){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        return false;
+    }
+
+    public static int test65(int num1,int num2){
+        if (num1 > num2){
+            int times = num1 / num2;
+            return num1 - (num2 * times);
+        }else{
+            int times = num2 / num1;
+            return num2 - (num1 * times);
+        }
+    }
+
+    public static boolean test66(int n){
+        for (int i = 2; i <= n-1; i++){
+            if (n % i == 0){
+                return false;
+            }
+        }
+        return true;
     }
 
 }

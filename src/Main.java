@@ -1449,6 +1449,16 @@ public class Main {
         // --------------------------------------------
 //        86. Write a Java program start with an integer n, divide n by 2
 //        if n is even or multiply by 3 and add 1 if n is odd, repeat the process until n = 1.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter your number: ");
+//        int n = in.nextInt();
+//        test86(n);
+        // --------------------------------------------
+//        87. Write a Java program than read an integer and calculate the sum of its digits
+//        and write the number of each digit of the sum in English.
+
+
+
 
 
 
@@ -1655,4 +1665,14 @@ public class Main {
         return strArray[0].equalsIgnoreCase("hello");
     }
 
+    public static void test86(int n){
+        while (n != 1){
+            if (n % 2 != 0){
+                n = n * 3 +1;
+            }else{
+                n = n / 2;
+            }
+            System.out.println(n);
+        }
+    }
 }

@@ -6,6 +6,7 @@ import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -1291,9 +1292,9 @@ public class Main {
 //        }
 //        System.out.println(test76(firstArray,secondArray));
         // --------------------------------------------
-//        77. Write a Java program to create a new array of length 2 from two arrays of integers
-//        with three elements and the new array will contain the first and last elements from
-//        the two arrays.
+//        77. Write a Java program to create a new array of length 2 from
+//        two arrays of integers with three elements and the new array will contain
+//        the first and last elements from the two arrays.
 //        Test Data: array1 = 50, -20, 0
 //        array2 = 5, -50, 10
 //        Sample Output:
@@ -1301,12 +1302,59 @@ public class Main {
 //        Array1: [50, -20, 0]
 //        Array2: [5, -50, 10]
 //        New Array: [50, 10]
-
-
-
-
-
-
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the number of elements you want to store for first array: ");
+//        int firstArrayLength = in.nextInt();
+//        System.out.println("Enter the elements of the first array: ");
+//        int[] firstArray = new int[firstArrayLength];
+//        for (int i = 0; i < firstArrayLength; i++){
+//            firstArray[i] = in.nextInt();
+//        }
+//        System.out.println("Enter the number of elements you want to store for first array: ");
+//        int secondArrayLength = in.nextInt();
+//        System.out.println("Enter the elements of the first array: ");
+//        int[] secondArray = new int[secondArrayLength];
+//        for (int i = 0; i < secondArrayLength; i++){
+//            secondArray[i] = in.nextInt();
+//        }
+//        System.out.println(test77(firstArray,secondArray) == null ? "Invalid array" : Arrays.toString(test77(firstArray,secondArray)));
+        // --------------------------------------------
+//        78. Write a Java program to test that a given array of integers of length 2 contains a 4 or a 7.
+//        Sample Output:
+//
+//        Original Array: [5, 7]
+//        true
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the number of elements you want to store for array: ");
+//        int n = in.nextInt();
+//        System.out.println("Enter the elements of the array: ");
+//        int[] intArray = new int[n];
+//        for (int i = 0; i < n; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println(test78(intArray));
+        // --------------------------------------------
+//        79. Write a Java program to rotate an array (length 3) of integers in left direction.
+//        Sample Output:
+//
+//        Original Array: [20, 30, 40]
+//        Rotated Array: [30, 40, 20]
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the number of elements you want to store for array: ");
+//        int n = in.nextInt();
+//        System.out.println("Enter the elements of the array: ");
+//        int[] intArray = new int[n];
+//        for (int i = 0; i < n; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println("Rotate Array: " + Arrays.toString(test79(intArray)));
+        // --------------------------------------------
+//        80. Write a Java program to get the larger value between first and last element
+//        of an array (length 3) of integers .
+//        Sample Output:
+//
+//        Original Array: [20, 30, 40]
+//        Larger value between first and last element: 40
 
 
 
@@ -1425,6 +1473,35 @@ public class Main {
             return true;
         }
         return false;
+    }
+
+    public static int[] test77(int[] intArray1,int[] intArray2){
+        int[] newArray = new int[2];
+        if (intArray1.length < 2 || intArray2.length < 2){
+            return null;
+        }
+        newArray[0] = intArray1[0];
+        newArray[1] = intArray2[intArray2.length -1];
+        return newArray;
+    }
+
+    public static boolean test78(int[] intArray){
+        for (int i : intArray){
+            if (i == 5 || i == 7){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int[] test79(int[] intArray){
+        int length = intArray.length;
+        int[] outArray = new int[length];
+        for (int i = 0; i < length -1;i++){
+            outArray[i] = intArray[i + 1];
+        }
+        outArray[length -1] = intArray[0];
+        return outArray;
     }
 
 }

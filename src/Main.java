@@ -1429,6 +1429,51 @@ public class Main {
 //        Sample Output:
 //
 //        honPythonhon
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input string: ");
+//        String str = in.nextLine();
+//        String newString = str.substring(2);
+//        str = newString + str + newString;
+//        System.out.println(str);
+        // --------------------------------------------
+//        85. Write a Java program to check if a string starts with a specified word.
+//        Sample Data: string1 = "Hello how are you?"
+//        Sample Output:
+//
+//        true
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input your string: ");
+//        String str = in.nextLine();
+//        String[] newStringArray = str.split(" ");
+//        System.out.println(test85(newStringArray));
+        // --------------------------------------------
+//        86. Write a Java program start with an integer n, divide n by 2
+//        if n is even or multiply by 3 and add 1 if n is odd, repeat the process until n = 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1604,6 +1649,10 @@ public class Main {
             newArray[i] = intArray1[i] * intArray2[i];
         }
         return newArray;
+    }
+
+    public static boolean test85(String[] strArray){
+        return strArray[0].equalsIgnoreCase("hello");
     }
 
 }

@@ -1456,6 +1456,17 @@ public class Main {
         // --------------------------------------------
 //        87. Write a Java program than read an integer and calculate the sum of its digits
 //        and write the number of each digit of the sum in English.
+//        int n = 9382748;
+//        System.out.println("Result: " + test87(n));
+        // --------------------------------------------
+//        88. Write a Java program to get the current system environment and system properties.
+//        System.out.println(System.getenv());
+//        System.out.println(System.getProperties());
+        // --------------------------------------------
+//        89. Write a Java program to check whether a security manager
+//        has already been established for the current application or not.
+
+
 
 
 
@@ -1674,5 +1685,33 @@ public class Main {
             }
             System.out.println(n);
         }
+    }
+
+    public static String test87(int num){
+        int n = 0;
+        String[] numberString = {"zero ","one ","two ","three ","four ","five ","six ","seven ","eight ","nine "};
+        while (num != 0){
+            n += num % 10;
+            num /= 10;
+        }
+        int numbers = n;
+        System.out.println(numbers);
+        int length = 0;
+        for (int i = 0; i < n; i++){
+            length++;
+            n /= 10;
+        }
+        String[] newStringArray = new String[length];
+        for (int i = 0; i < newStringArray.length; i++){
+            newStringArray[i] = numberString[numbers % 10];
+            numbers /= 10;
+        }
+        String[] reverseArray = new String[newStringArray.length];
+        int newStringArrayLength = newStringArray.length;
+        for (int i = 0; i < reverseArray.length; i++){
+            reverseArray[i] = newStringArray[newStringArrayLength -1];
+            newStringArrayLength--;
+        }
+        return Arrays.toString(reverseArray);
     }
 }

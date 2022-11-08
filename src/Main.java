@@ -1465,6 +1465,42 @@ public class Main {
         // --------------------------------------------
 //        89. Write a Java program to check whether a security manager
 //        has already been established for the current application or not.
+//        System.out.println("System security interface: ");
+//        System.out.println(System.getSecurityManager());
+        // --------------------------------------------
+//        90. Write a Java program to get the value of the environment variable PATH, TEMP, USERNAME.
+//        System.out.println("\nEnvironment variable PATH: ");
+//        System.out.println(System.getenv("PATH"));
+//        System.out.println("\nEnvironment variable TEMP: ");
+//        System.out.println(System.getenv("TEMP"));
+//        System.out.println("\nEnvironment variable USERNAME: ");
+//        System.out.println(System.getenv("USERNAME"));
+        // --------------------------------------------
+//        91. Write a Java program to measure how long some code takes to execute in nanoseconds.
+//        long startTime = System.nanoTime();
+//        int i;
+//        for (i = 1;i <= 10; i++){
+//            System.out.println(i);
+//        }
+//        long estimatedTime = System.nanoTime() - startTime;
+//        System.out.println("Estimated time (in nanoseconds) to get the first 10 natural numbers: " + estimatedTime);
+        // --------------------------------------------
+//        92. Write a Java program to count the number of even and odd elements in a given array of integers.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the size of array you want: ");
+//        int n = in.nextInt();
+//        int[] intArray = new int[n];
+//        System.out.println("Input the numbers you want store the array: ");
+//        for (int i = 0; i < n; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        test92(intArray);
+        // --------------------------------------------
+//        93. Write a Java program to test if an array of integers contains an element
+//        10 next to 10 or an element 20 next to 20, but not both.
+
+
+
 
 
 
@@ -1713,5 +1749,20 @@ public class Main {
             newStringArrayLength--;
         }
         return Arrays.toString(reverseArray);
+    }
+
+    public static void test92(int[] intArray){
+        int evenNumber = 0;
+        int oddNumber = 0;
+        for (int i : intArray){
+            if (i % 2 == 0){
+                evenNumber++;
+            }else{
+                oddNumber++;
+            }
+        }
+        System.out.println("Quantity of even number: " + evenNumber);
+        System.out.println("Quantity of odd number: " + oddNumber);
+
     }
 }

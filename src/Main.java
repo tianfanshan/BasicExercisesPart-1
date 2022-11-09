@@ -1498,7 +1498,15 @@ public class Main {
         // --------------------------------------------
 //        93. Write a Java program to test if an array of integers contains an element
 //        10 next to 10 or an element 20 next to 20, but not both.
-
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input the size of array you want: ");
+        int n = in.nextInt();
+        int[] intArray = new int[n];
+        System.out.println("Input the numbers you want store the array: ");
+        for (int i = 0; i < n; i++){
+            intArray[i] = in.nextInt();
+        }
+        test93(intArray);
 
 
 
@@ -1763,6 +1771,20 @@ public class Main {
         }
         System.out.println("Quantity of even number: " + evenNumber);
         System.out.println("Quantity of odd number: " + oddNumber);
+    }
 
+    public static void test93(int[] numbers){
+        boolean found1010 = false;
+        boolean found2020 = false;
+        for (int i = 0 ; i < numbers.length -1 ;i++){
+            if (numbers[i] == 10 && numbers[i+1] == 10){
+                found1010 = true;
+            }
+            if (numbers[i] == 20 && numbers[i+1] == 20){
+                found2020 = true;
+            }
+        }
+        System.out.println(String.valueOf(found1010 != found2020));
+        System.out.println("\n");
     }
 }

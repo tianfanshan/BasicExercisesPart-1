@@ -1498,78 +1498,38 @@ public class Main {
         // --------------------------------------------
 //        93. Write a Java program to test if an array of integers contains an element
 //        10 next to 10 or an element 20 next to 20, but not both.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Input the size of array you want: ");
+//        int n = in.nextInt();
+//        int[] intArray = new int[n];
+//        System.out.println("Input the numbers you want store the array: ");
+//        for (int i = 0; i < n; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        test93(intArray);
+        // --------------------------------------------
+//        94. Write a Java program to rearrange all the elements of a given array
+//        of integers so that all the odd numbers come before all the even numbers.
         Scanner in = new Scanner(System.in);
-        System.out.println("Input the size of array you want: ");
-        int n = in.nextInt();
-        int[] intArray = new int[n];
-        System.out.println("Input the numbers you want store the array: ");
-        for (int i = 0; i < n; i++){
-            intArray[i] = in.nextInt();
+        System.out.println("Enter the length of the array: ");
+        int l = in.nextInt();
+        int[] intList = new int[l];
+        System.out.println("Enter the elements you want to store in to array: ");
+        for (int i = 0; i < l; i++) {
+            intList[i] = in.nextInt();
         }
-        test93(intArray);
+        System.out.println("Original Array:: " + Arrays.toString(intList));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        for (int i = 0; i < l; i++) {
+            for (int j = i + 1; j < l; j++) {
+                if (intList[i] % 2 == 0 && intList[j] % 2 != 0) {
+                    int temp = intList[i];
+                    intList[i] = intList[j];
+                    intList[j] = temp;
+                }
+            }
+        }
+        System.out.println("new Array:: " + Arrays.toString(intList));
 
 
     }
@@ -1716,56 +1676,56 @@ public class Main {
         return newArray;
     }
 
-    public static boolean test85(String[] strArray){
+    public static boolean test85(String[] strArray) {
         return strArray[0].equalsIgnoreCase("hello");
     }
 
-    public static void test86(int n){
-        while (n != 1){
-            if (n % 2 != 0){
-                n = n * 3 +1;
-            }else{
+    public static void test86(int n) {
+        while (n != 1) {
+            if (n % 2 != 0) {
+                n = n * 3 + 1;
+            } else {
                 n = n / 2;
             }
             System.out.println(n);
         }
     }
 
-    public static String test87(int num){
+    public static String test87(int num) {
         int n = 0;
-        String[] numberString = {"zero ","one ","two ","three ","four ","five ","six ","seven ","eight ","nine "};
-        while (num != 0){
+        String[] numberString = {"zero ", "one ", "two ", "three ", "four ", "five ", "six ", "seven ", "eight ", "nine "};
+        while (num != 0) {
             n += num % 10;
             num /= 10;
         }
         int numbers = n;
         System.out.println(numbers);
         int length = 0;
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             length++;
             n /= 10;
         }
         String[] newStringArray = new String[length];
-        for (int i = 0; i < newStringArray.length; i++){
+        for (int i = 0; i < newStringArray.length; i++) {
             newStringArray[i] = numberString[numbers % 10];
             numbers /= 10;
         }
         String[] reverseArray = new String[newStringArray.length];
         int newStringArrayLength = newStringArray.length;
-        for (int i = 0; i < reverseArray.length; i++){
-            reverseArray[i] = newStringArray[newStringArrayLength -1];
+        for (int i = 0; i < reverseArray.length; i++) {
+            reverseArray[i] = newStringArray[newStringArrayLength - 1];
             newStringArrayLength--;
         }
         return Arrays.toString(reverseArray);
     }
 
-    public static void test92(int[] intArray){
+    public static void test92(int[] intArray) {
         int evenNumber = 0;
         int oddNumber = 0;
-        for (int i : intArray){
-            if (i % 2 == 0){
+        for (int i : intArray) {
+            if (i % 2 == 0) {
                 evenNumber++;
-            }else{
+            } else {
                 oddNumber++;
             }
         }
@@ -1773,18 +1733,19 @@ public class Main {
         System.out.println("Quantity of odd number: " + oddNumber);
     }
 
-    public static void test93(int[] numbers){
+    public static void test93(int[] numbers) {
         boolean found1010 = false;
         boolean found2020 = false;
-        for (int i = 0 ; i < numbers.length -1 ;i++){
-            if (numbers[i] == 10 && numbers[i+1] == 10){
+        for (int i = 0; i < numbers.length - 1; i++) {
+            if (numbers[i] == 10 && numbers[i + 1] == 10) {
                 found1010 = true;
             }
-            if (numbers[i] == 20 && numbers[i+1] == 20){
+            if (numbers[i] == 20 && numbers[i + 1] == 20) {
                 found2020 = true;
             }
         }
         System.out.println(String.valueOf(found1010 != found2020));
         System.out.println("\n");
     }
+
 }

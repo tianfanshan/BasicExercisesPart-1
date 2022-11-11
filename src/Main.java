@@ -1510,26 +1510,80 @@ public class Main {
         // --------------------------------------------
 //        94. Write a Java program to rearrange all the elements of a given array
 //        of integers so that all the odd numbers come before all the even numbers.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the length of the array: ");
+//        int l = in.nextInt();
+//        int[] intList = new int[l];
+//        System.out.println("Enter the elements you want to store in to array: ");
+//        for (int i = 0; i < l; i++) {
+//            intList[i] = in.nextInt();
+//        }
+//        System.out.println("Original Array:: " + Arrays.toString(intList));
+//
+//        for (int i = 0; i < l; i++) {
+//            for (int j = i + 1; j < l; j++) {
+//                if (intList[i] % 2 == 0 && intList[j] % 2 != 0) {
+//                    int temp = intList[i];
+//                    intList[i] = intList[j];
+//                    intList[j] = temp;
+//                }
+//            }
+//        }
+//        System.out.println("new Array:: " + Arrays.toString(intList));
+        // --------------------------------------------
+//        95. Write a Java program to create an array (length # 0) of string values.
+//        The elements will contain "0", "1", "2" … through ... n-1
+//        Scanner in = new Scanner(System.in);
+//        int n = in.nextInt();
+//        String[] stringArray = new String[n];
+//        for (int i = 0 ; i < n ; i++){
+//            stringArray[i] = String.valueOf(i);
+//        }
+//        System.out.println("New Array:" + Arrays.toString(stringArray));
+        // --------------------------------------------
+//        96. Write a Java program to check if there is a 10 in a given array
+//        of integers with a 20 somewhere later in the array.
+//        Scanner in = new Scanner(System.in);
+//        int n = in.nextInt();
+//        int[] intArray = new int[n];
+//        System.out.println("Enter the elements you want to store into the array: ");
+//        for (int i = 0 ; i < n ; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println(test96(intArray));
+        // --------------------------------------------
+//        97. Write a Java program to check if an array of integers contains a specified
+//        number next to each other or there are two same specified numbers separated by one element.
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter the length of the array: ");
-        int l = in.nextInt();
-        int[] intList = new int[l];
-        System.out.println("Enter the elements you want to store in to array: ");
-        for (int i = 0; i < l; i++) {
-            intList[i] = in.nextInt();
+        System.out.println("Enter your array length: ");
+        int n = in.nextInt();
+        int[] intArray = new int[n];
+        System.out.println("Enter the elements you want to store into the array: ");
+        for (int i = 0; i < n; i++) {
+            intArray[i] = in.nextInt();
         }
-        System.out.println("Original Array:: " + Arrays.toString(intList));
+        System.out.println(test97(intArray));
 
-        for (int i = 0; i < l; i++) {
-            for (int j = i + 1; j < l; j++) {
-                if (intList[i] % 2 == 0 && intList[j] % 2 != 0) {
-                    int temp = intList[i];
-                    intList[i] = intList[j];
-                    intList[j] = temp;
-                }
-            }
-        }
-        System.out.println("new Array:: " + Arrays.toString(intList));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
@@ -1746,6 +1800,32 @@ public class Main {
         }
         System.out.println(String.valueOf(found1010 != found2020));
         System.out.println("\n");
+    }
+
+    public static boolean test96(int[] intArray) {
+        int pos1 = 0;
+        int pos2 = 0;
+        for (int i = 0; i < intArray.length; i++) {
+            if (intArray[i] == 10) {
+                pos1 = i;
+            }
+            if (intArray[i] == 20) {
+                pos2 = i;
+            }
+        }
+        return pos1 < pos2;
+    }
+
+    public static boolean test97(int[] intArray) {
+        if (intArray.length == 2){
+            return intArray[0] == intArray[1];
+        }
+        for (int i = 0; i < intArray.length - 1; i++) {
+            if (intArray[i] == intArray[i + 1] || intArray[i] == intArray[i + 2]) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

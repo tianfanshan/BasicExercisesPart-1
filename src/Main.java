@@ -1554,15 +1554,44 @@ public class Main {
         // --------------------------------------------
 //        97. Write a Java program to check if an array of integers contains a specified
 //        number next to each other or there are two same specified numbers separated by one element.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter your array length: ");
+//        int n = in.nextInt();
+//        int[] intArray = new int[n];
+//        System.out.println("Enter the elements you want to store into the array: ");
+//        for (int i = 0; i < n; i++) {
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println(test97(intArray));
+        // --------------------------------------------
+//        98. Write a Java program to check if the value 20 appears
+//        three times and no 20's are next to each other in a given array of integers.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the quantity of items you want to store: ");
+//        int n = in.nextInt();
+//        System.out.println("Enter the items you want to store: ");
+//        int[] intArray = new int[n];
+//        for (int i = 0 ; i < n ; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println(test98(intArray));
+        // --------------------------------------------
+//        99. Write a Java program to check if a specified number appears in every
+//        pair of adjacent element of a given array of integers.
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter your array length: ");
+        System.out.println("Enter the specific number: ");
+        int num = in.nextInt();
+        System.out.println("Enter the quantity of items you want to store: ");
         int n = in.nextInt();
+        System.out.println("Enter the items you want to store: ");
         int[] intArray = new int[n];
-        System.out.println("Enter the elements you want to store into the array: ");
-        for (int i = 0; i < n; i++) {
+        for (int i = 0 ; i < n ; i++){
             intArray[i] = in.nextInt();
         }
-        System.out.println(test97(intArray));
+        System.out.println(test99(num,intArray));
+
+
+
 
 
 
@@ -1826,6 +1855,25 @@ public class Main {
             }
         }
         return false;
+    }
+
+    public static boolean test98(int[] intArray){
+        int count = 0;
+        for (int i = 0; i < intArray.length ; i++){
+            if (intArray[i] == 20 && intArray[i] != intArray[i+1]){
+                count++;
+            }
+        }
+        return count >= 3;
+    }
+
+    public static boolean test99(int num, int[] intArray){
+        for (int i = 0 ; i < intArray.length -1; i++){
+            if (intArray[i] != num && intArray[i + 1] != num){
+                return false;
+            }
+        }
+        return true;
     }
 
 }

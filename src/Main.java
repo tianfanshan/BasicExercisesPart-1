@@ -1609,15 +1609,27 @@ public class Main {
         // --------------------------------------------
 //        101. Write a Java program to check if the number of 10 is
 //        greater than number to 20 in a given array of integers.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter your array length: ");
+//        int n = in.nextInt();
+//        int[] numArray = new int[n];
+//        System.out.println("Enter the elements you want to store into the array: ");
+//        for (int i = 0 ; i < n ; i++){
+//            numArray[i] = in.nextInt();
+//        }
+//        System.out.println(test101(numArray));
+        // --------------------------------------------
+//        102. Write a Java program to check if a specified
+//        array of integers contains 10 or 30.
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter your array length: ");
+        System.out.println("Enter the length of the array: ");
         int n = in.nextInt();
         int[] numArray = new int[n];
         System.out.println("Enter the elements you want to store into the array: ");
         for (int i = 0 ; i < n ; i++){
             numArray[i] = in.nextInt();
         }
-        System.out.println(test101(numArray));
+        System.out.println(test102(numArray));
 
 
 
@@ -1929,6 +1941,15 @@ public class Main {
         }
         System.out.println(ten + "   " + twenty);
         return ten > twenty;
+    }
+
+    public static boolean test102(int[] numArray){
+        for (int j : numArray) {
+            if (j == 10 || j == 20) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

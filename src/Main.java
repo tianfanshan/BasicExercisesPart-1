@@ -1578,17 +1578,48 @@ public class Main {
         // --------------------------------------------
 //        99. Write a Java program to check if a specified number appears in every
 //        pair of adjacent element of a given array of integers.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the specific number: ");
+//        int num = in.nextInt();
+//        System.out.println("Enter the quantity of items you want to store: ");
+//        int n = in.nextInt();
+//        System.out.println("Enter the items you want to store: ");
+//        int[] intArray = new int[n];
+//        for (int i = 0 ; i < n ; i++){
+//            intArray[i] = in.nextInt();
+//        }
+//        System.out.println(test99(num,intArray));
+        // --------------------------------------------
+//        100. Write a Java program to count the two elements of two given arrays
+//        of integers with same length, differ by 1 or less.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter array length: ");
+//        int n = in.nextInt();
+//        int[] firstArray = new int[n];
+//        int[] secondArray = new int[n];
+//        System.out.println("Enter first arrays elements: ");
+//        for (int i = 0 ; i < n ;i++){
+//            firstArray[i] = in.nextInt();
+//        }
+//        System.out.println("Enter second arrays elements:");
+//        for (int i = 0 ; i < n ;i++){
+//            secondArray[i] = in.nextInt();
+//        }
+//        System.out.println("Number of elements: " + test100(firstArray,secondArray));
+        // --------------------------------------------
+//        101. Write a Java program to check if the number of 10 is
+//        greater than number to 20 in a given array of integers.
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter the specific number: ");
-        int num = in.nextInt();
-        System.out.println("Enter the quantity of items you want to store: ");
+        System.out.println("Enter your array length: ");
         int n = in.nextInt();
-        System.out.println("Enter the items you want to store: ");
-        int[] intArray = new int[n];
+        int[] numArray = new int[n];
+        System.out.println("Enter the elements you want to store into the array: ");
         for (int i = 0 ; i < n ; i++){
-            intArray[i] = in.nextInt();
+            numArray[i] = in.nextInt();
         }
-        System.out.println(test99(num,intArray));
+        System.out.println(test101(numArray));
+
+
 
 
 
@@ -1874,6 +1905,30 @@ public class Main {
             }
         }
         return true;
+    }
+
+    public static int test100(int[] firstArray,int[] secondArray){
+        int count = 0;
+        for (int i = 0 ; i < firstArray.length; i++){
+            if (Math.abs(firstArray[i] - secondArray[i]) <= 1 && firstArray[i] != secondArray[i]){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static boolean test101(int[] numArray){
+        int ten = 0;
+        int twenty = 0;
+        for (int i = 0; i < numArray.length ; i++){
+            if (numArray[i] == 10){
+                ten++;
+            } else if (numArray[i] == 20) {
+                twenty++;
+            }
+        }
+        System.out.println(ten + "   " + twenty);
+        return ten > twenty;
     }
 
 }

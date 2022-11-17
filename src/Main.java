@@ -1621,15 +1621,39 @@ public class Main {
         // --------------------------------------------
 //        102. Write a Java program to check if a specified
 //        array of integers contains 10 or 30.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the length of the array: ");
+//        int n = in.nextInt();
+//        int[] numArray = new int[n];
+//        System.out.println("Enter the elements you want to store into the array: ");
+//        for (int i = 0 ; i < n ; i++){
+//            numArray[i] = in.nextInt();
+//        }
+//        System.out.println(test102(numArray));
+        // --------------------------------------------
+//        103. Write a Java program to create a new array from a given array of integers,
+//        new array will contain the elements from the given array after the last element value 10.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the length of array you want to create: ");
+//        int n = in.nextInt();
+//        int[] numArray = new int[n];
+//        System.out.println("Enter the elements you want to store into the array: ");
+//        for (int i = 0 ; i < n ; i++){
+//            numArray[i] = in.nextInt();
+//        }
+//        System.out.println(Arrays.toString(test103(numArray)));
+        // --------------------------------------------
+//        104. Write a Java program to create a new array from a given array of integers,
+//        new array will contain the elements from the given array before the last element value 10.
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter the length of the array: ");
+        System.out.println("Enter the length of array you want to create: ");
         int n = in.nextInt();
-        int[] numArray = new int[n];
         System.out.println("Enter the elements you want to store into the array: ");
-        for (int i = 0 ; i < n ; i++){
+        int[] numArray = new int[n];
+        for (int i = 0 ; i < numArray.length; i++){
             numArray[i] = in.nextInt();
         }
-        System.out.println(test102(numArray));
+        System.out.println(Arrays.toString(test104(numArray)));
 
 
 
@@ -1945,11 +1969,37 @@ public class Main {
 
     public static boolean test102(int[] numArray){
         for (int j : numArray) {
-            if (j == 10 || j == 20) {
+            if (j == 10 || j == 30) {
                 return true;
             }
         }
         return false;
+    }
+
+    public static int[] test103(int[] numArray){
+        int n = numArray.length -1;
+        int[] newArray;
+        for (int i : numArray){
+            if (numArray[n] != 10){
+                n--;
+            }
+        }
+        newArray = new int[numArray.length -1 -n];
+        for (int i = n + 1; i < numArray.length ; i++){
+            newArray[i -n -1] = numArray[i];
+        }
+        return newArray;
+    }
+
+    public static int[] test104(int[] numArray){
+        int n = 0;
+        int[] newArray;
+        while(numArray[n] != 10){
+            n++;
+        }
+        newArray = new int[n];
+        System.arraycopy(numArray, 0, newArray, 0, n);
+        return newArray;
     }
 
 }

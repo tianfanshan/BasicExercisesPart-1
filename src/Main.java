@@ -1645,15 +1645,57 @@ public class Main {
         // --------------------------------------------
 //        104. Write a Java program to create a new array from a given array of integers,
 //        new array will contain the elements from the given array before the last element value 10.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the length of array you want to create: ");
+//        int n = in.nextInt();
+//        System.out.println("Enter the elements you want to store into the array: ");
+//        int[] numArray = new int[n];
+//        for (int i = 0 ; i < numArray.length; i++){
+//            numArray[i] = in.nextInt();
+//        }
+//        System.out.println(Arrays.toString(test104(numArray)));
+        // --------------------------------------------
+//        105. Write a Java program to check if a group
+//        of numbers (l) at the start and end of a given array are same.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the length of array: ");
+//        int n = in.nextInt();
+//        int[] numArray = new int[n];
+//        System.out.println("Enter the elements you want to store into the array: ");
+//        for (int i = 0 ; i < n ; i++){
+//            numArray[i] = in.nextInt();
+//        }
+//        System.out.println("Enter the number l: ");
+//        int l = in.nextInt();
+//        System.out.println(test105(numArray,l));
+        // --------------------------------------------
+//        106. Write a Java program to create a new array that
+//        is left shifted from a given array of integers.
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the length of array: ");
+//        int n = in.nextInt();
+//        int[] numArray = new int[n];
+//        System.out.println("Enter the elements you want to store into the array: ");
+//        for (int i = 0 ; i < n ; i++){
+//            numArray[i] = in.nextInt();
+//        }
+//        System.out.println(Arrays.toString(test106(numArray)));
+        // --------------------------------------------
+//        107. Write a Java program to check if an array
+//        of integers contains three increasing adjacent numbers.
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter the length of array you want to create: ");
+        System.out.println("Enter the length of array: ");
         int n = in.nextInt();
-        System.out.println("Enter the elements you want to store into the array: ");
         int[] numArray = new int[n];
-        for (int i = 0 ; i < numArray.length; i++){
+        System.out.println("Enter the elements you want to store into the array: ");
+        for (int i = 0 ; i < n ; i++){
             numArray[i] = in.nextInt();
         }
-        System.out.println(Arrays.toString(test104(numArray)));
+        System.out.println(test107(numArray));
+
+
+
+
 
 
 
@@ -2000,6 +2042,48 @@ public class Main {
         newArray = new int[n];
         System.arraycopy(numArray, 0, newArray, 0, n);
         return newArray;
+    }
+
+    public static boolean test105(int[] numArray, int l){
+        int start = 0;
+        int end = numArray.length -l;
+        for (int i = 0 ; i < l ; i++){
+            if (numArray[start] != numArray[end]){
+                return false;
+            }else{
+                start++;
+                end++;
+            }
+        }
+        return false;
+    }
+
+    public static int[] test106(int[] numArray){
+        int[] newArray = new int[numArray.length];
+        if (numArray.length - 1 >= 0)
+            System.arraycopy(numArray, 1, newArray, 0, numArray.length - 1);
+        newArray[newArray.length-1] = numArray[0];
+        return newArray;
+    }
+
+    public static boolean test107(int[] numArray){
+
+        int count = 0;
+        if (numArray.length < 4){
+            return false;
+        }
+        for (int i = 0 ; i < numArray.length -1 ; i++){
+            if (numArray[i] +1 == numArray[i + 1]){
+                count++;
+                if (count == 3){
+                    return true;
+                }
+            }else{
+                count = 0;
+            }
+            System.out.println(count);
+        }
+        return false;
     }
 
 }

@@ -1683,15 +1683,22 @@ public class Main {
         // --------------------------------------------
 //        107. Write a Java program to check if an array
 //        of integers contains three increasing adjacent numbers.
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter the length of array: ");
-        int n = in.nextInt();
-        int[] numArray = new int[n];
-        System.out.println("Enter the elements you want to store into the array: ");
-        for (int i = 0 ; i < n ; i++){
-            numArray[i] = in.nextInt();
-        }
-        System.out.println(test107(numArray));
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter the length of array: ");
+//        int n = in.nextInt();
+//        int[] numArray = new int[n];
+//        System.out.println("Enter the elements you want to store into the array: ");
+//        for (int i = 0 ; i < n ; i++){
+//            numArray[i] = in.nextInt();
+//        }
+//        System.out.println(test107(numArray));
+        // --------------------------------------------
+//        108. Write a Java program to add all the digits of a given positive
+//        integer until the result has a single digit.
+//        System.out.println(test108(1234));
+        // --------------------------------------------
+//        109. Write a Java program to form a staircase shape of n coins
+//        where every k-th row must have exactly k coins.
 
 
 
@@ -2084,6 +2091,10 @@ public class Main {
             System.out.println(count);
         }
         return false;
+    }
+
+    public static int test108(int n){
+        return (n == 0 ? 0 : (n % 9 == 0 ? 9 : n % 9));
     }
 
 }

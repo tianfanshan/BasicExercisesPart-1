@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -1699,32 +1700,59 @@ public class Main {
         // --------------------------------------------
 //        109. Write a Java program to form a staircase shape of n coins
 //        where every k-th row must have exactly k coins.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//        Scanner in = new Scanner(System.in);
+//        System.out.print("Input a positive integer: ");
+//        int n = in.nextInt();
+//        if (n > 0) {
+//            System.out.println("Number of rows: " + ((int) ((Math.sqrt(8 * (long) n + 1) - 1) / 2)));
+//        }
+        // --------------------------------------------
+//        110. Write a Java program to check whether a given integer is a power of 4 or not.
+//        Given num = 64, return true. Given num = 6, return false.
+//        int test = 0;
+//        Scanner in = new Scanner(System.in);
+//        System.out.print("Input a positive integer: ");
+//        int n = in.nextInt();
+//        if (n < 1) {
+//            System.out.print(Boolean.toString(false));
+//            test = 1;
+//        }
+//        if ((n & (n - 1)) != 0) {
+//            System.out.print(Boolean.toString(false));
+//            test = 1;
+//        }
+//        if (test==0)
+//        {
+//            System.out.print(Boolean.toString((n & 0x55555555) != 0));
+//        }
+//        System.out.print("\n");
+        // --------------------------------------------
+//        111. Write a Java program to add two numbers without using any arithmetic operators.
+//                Given x = 10 and y = 12; result = 22
+//        int x = 10;
+//        int y = 12;
+//        System.out.println(IntStream.of(x,y).sum());
+        // --------------------------------------------
+//        112. Write a Java program to compute the number of trailing zeros in a factorial.
+//        7! = 5040, therefore the output should be 1
+//        Scanner in = new Scanner(System.in);
+//        System.out.print("Input a number: ");
+//        int n = in.nextInt();
+//        int n1 = n;
+//        long ctr = 0;
+//        while (n != 0)
+//        {
+//            ctr += n / 5;
+//            n /= 5;
+//        }
+//        System.out.printf("Number of trailing zeros of the factorial %d is %d ",n1,ctr);
+//        System.out.printf("\n");
+        // --------------------------------------------
+//        113. Write a Java program to merge two given sorted array of integers
+//        and create a new sorted array.
+//        array1 = [1,2,3,4]
+//        array2 = [2,5,7, 8]
+//        result = [1,2,2,3,4,5,7,8]
 
 
 
@@ -1962,7 +1990,7 @@ public class Main {
     }
 
     public static boolean test97(int[] intArray) {
-        if (intArray.length == 2){
+        if (intArray.length == 2) {
             return intArray[0] == intArray[1];
         }
         for (int i = 0; i < intArray.length - 1; i++) {
@@ -1973,40 +2001,40 @@ public class Main {
         return false;
     }
 
-    public static boolean test98(int[] intArray){
+    public static boolean test98(int[] intArray) {
         int count = 0;
-        for (int i = 0; i < intArray.length ; i++){
-            if (intArray[i] == 20 && intArray[i] != intArray[i+1]){
+        for (int i = 0; i < intArray.length; i++) {
+            if (intArray[i] == 20 && intArray[i] != intArray[i + 1]) {
                 count++;
             }
         }
         return count >= 3;
     }
 
-    public static boolean test99(int num, int[] intArray){
-        for (int i = 0 ; i < intArray.length -1; i++){
-            if (intArray[i] != num && intArray[i + 1] != num){
+    public static boolean test99(int num, int[] intArray) {
+        for (int i = 0; i < intArray.length - 1; i++) {
+            if (intArray[i] != num && intArray[i + 1] != num) {
                 return false;
             }
         }
         return true;
     }
 
-    public static int test100(int[] firstArray,int[] secondArray){
+    public static int test100(int[] firstArray, int[] secondArray) {
         int count = 0;
-        for (int i = 0 ; i < firstArray.length; i++){
-            if (Math.abs(firstArray[i] - secondArray[i]) <= 1 && firstArray[i] != secondArray[i]){
+        for (int i = 0; i < firstArray.length; i++) {
+            if (Math.abs(firstArray[i] - secondArray[i]) <= 1 && firstArray[i] != secondArray[i]) {
                 count++;
             }
         }
         return count;
     }
 
-    public static boolean test101(int[] numArray){
+    public static boolean test101(int[] numArray) {
         int ten = 0;
         int twenty = 0;
-        for (int i = 0; i < numArray.length ; i++){
-            if (numArray[i] == 10){
+        for (int i = 0; i < numArray.length; i++) {
+            if (numArray[i] == 10) {
                 ten++;
             } else if (numArray[i] == 20) {
                 twenty++;
@@ -2016,7 +2044,7 @@ public class Main {
         return ten > twenty;
     }
 
-    public static boolean test102(int[] numArray){
+    public static boolean test102(int[] numArray) {
         for (int j : numArray) {
             if (j == 10 || j == 30) {
                 return true;
@@ -2025,25 +2053,25 @@ public class Main {
         return false;
     }
 
-    public static int[] test103(int[] numArray){
-        int n = numArray.length -1;
+    public static int[] test103(int[] numArray) {
+        int n = numArray.length - 1;
         int[] newArray;
-        for (int i : numArray){
-            if (numArray[n] != 10){
+        for (int i : numArray) {
+            if (numArray[n] != 10) {
                 n--;
             }
         }
-        newArray = new int[numArray.length -1 -n];
-        for (int i = n + 1; i < numArray.length ; i++){
-            newArray[i -n -1] = numArray[i];
+        newArray = new int[numArray.length - 1 - n];
+        for (int i = n + 1; i < numArray.length; i++) {
+            newArray[i - n - 1] = numArray[i];
         }
         return newArray;
     }
 
-    public static int[] test104(int[] numArray){
+    public static int[] test104(int[] numArray) {
         int n = 0;
         int[] newArray;
-        while(numArray[n] != 10){
+        while (numArray[n] != 10) {
             n++;
         }
         newArray = new int[n];
@@ -2051,13 +2079,13 @@ public class Main {
         return newArray;
     }
 
-    public static boolean test105(int[] numArray, int l){
+    public static boolean test105(int[] numArray, int l) {
         int start = 0;
-        int end = numArray.length -l;
-        for (int i = 0 ; i < l ; i++){
-            if (numArray[start] != numArray[end]){
+        int end = numArray.length - l;
+        for (int i = 0; i < l; i++) {
+            if (numArray[start] != numArray[end]) {
                 return false;
-            }else{
+            } else {
                 start++;
                 end++;
             }
@@ -2065,27 +2093,27 @@ public class Main {
         return false;
     }
 
-    public static int[] test106(int[] numArray){
+    public static int[] test106(int[] numArray) {
         int[] newArray = new int[numArray.length];
         if (numArray.length - 1 >= 0)
             System.arraycopy(numArray, 1, newArray, 0, numArray.length - 1);
-        newArray[newArray.length-1] = numArray[0];
+        newArray[newArray.length - 1] = numArray[0];
         return newArray;
     }
 
-    public static boolean test107(int[] numArray){
+    public static boolean test107(int[] numArray) {
 
         int count = 0;
-        if (numArray.length < 4){
+        if (numArray.length < 4) {
             return false;
         }
-        for (int i = 0 ; i < numArray.length -1 ; i++){
-            if (numArray[i] +1 == numArray[i + 1]){
+        for (int i = 0; i < numArray.length - 1; i++) {
+            if (numArray[i] + 1 == numArray[i + 1]) {
                 count++;
-                if (count == 3){
+                if (count == 3) {
                     return true;
                 }
-            }else{
+            } else {
                 count = 0;
             }
             System.out.println(count);
@@ -2093,7 +2121,7 @@ public class Main {
         return false;
     }
 
-    public static int test108(int n){
+    public static int test108(int n) {
         return (n == 0 ? 0 : (n % 9 == 0 ? 9 : n % 9));
     }
 
